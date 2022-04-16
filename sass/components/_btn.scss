@@ -18,11 +18,12 @@
     transition-property: background;
     transition-duration: var(--trans-dur-250ms);
     transition-timing-function: var(--cubic-bezier);
+
+    &:hover,
+    &:focus,
+    &:visited {
+        cursor: pointer;
+        background: var(--secondary-color-btn);
+    }
 }
 
-.btn:hover,
-.btn:focus,
-.btn:visited {
-    cursor: pointer;
-    background: var(--secondary-color-btn);
-}

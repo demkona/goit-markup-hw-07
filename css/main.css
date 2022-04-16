@@ -56,9 +56,7 @@
   transition-timing-function: var(--cubic-bezier);
 }
 
-.btn:hover,
-.btn:focus,
-.btn:visited {
+.btn:hover, .btn:focus, .btn:visited {
   cursor: pointer;
   background: var(--secondary-color-btn);
 }
@@ -616,6 +614,9 @@ img {
   padding: 0;
   background: var(--primary-color-bg);
   border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.model-close-icon {
   transition-property: fill;
   transition-duration: var(--trans-dur-250ms);
   transition-timing-function: var(--cubic-bezier);
@@ -662,15 +663,21 @@ img {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  transition-property: border-color, fill;
-  transition-duration: var(--trans-dur-250ms);
-  transition-timing-function: var(--cubic-bezier);
 }
 
-.bd-form-input:focus,
-.bd-form-input:hover {
+.bd-form-input:focus, .bd-form-input:hover {
   outline: none;
   border-color: var(--primary-color-accent);
+}
+
+.form-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  transition-property: fill;
+  transition-duration: var(--trans-dur-250ms);
+  transition-timing-function: var(--cubic-bezier);
 }
 
 .bd-form-input:focus + .form-icon,
@@ -691,28 +698,19 @@ img {
   letter-spacing: 0.01em;
   border-radius: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   transition-property: border-color;
   transition-duration: var(--trans-dur-250ms);
   transition-timing-function: var(--cubic-bezier);
 }
 
-.comment input::placeholder {
-  color: rgba(117, 117, 117, 0.5);
-}
-
-.comment:focus,
-.comment:hover {
+.comment:focus, .comment:hover {
   outline: none;
   border-color: var(--primary-color-accent);
 }
 
-.form-icon {
-  position: absolute;
-  top: 50%;
-  left: 12px;
-  transform: translateY(-50%);
+.comment::placeholder {
+  color: rgba(117, 117, 117, 0.5);
 }
 
 .form-checkbox {
@@ -732,21 +730,20 @@ img {
 
 .policy-checkbox::before {
   content: "";
-  display: inline-block;
   width: 16px;
   height: 15px;
   border: 2px solid var(--secondary-text-color);
   border-radius: 2px;
   cursor: pointer;
   margin-right: 10px;
-  top: 12px;
-  left: 1px;
 }
 
 .form-checkbox:checked + .policy-checkbox::before {
   background-image: url(../images/icon-policy.svg);
   background-color: var(--primary-color-accent);
   border-color: transparent;
+  background-size: contain;
+  background-origin: border-box;
 }
 
 .form-checkbox:focus + .policy-checkbox::before {
