@@ -731,7 +731,7 @@ img {
 }
 
 .form-checkbox:checked + .policy-checkbox::before {
-  background-image: url(./images/icon-policy.svg);
+  background-image: url(../images/icon-policy.svg);
   background-color: var(--primary-color-accent);
   border-color: transparent;
   background-size: contain;
